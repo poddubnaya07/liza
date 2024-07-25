@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать претензию</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Наш город - Павловский Посад</h1>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="claim-form-container">
+            <div class="container">
+                <h2>Подайте претензию</h2>
+                <p>Опишите вашу проблему, и мы передадим ее в соответствующие органы.</p>
+                <form class="claim-form" action="submit.php" method="post"> 
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Ваш email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Тема претензии:</label>
+                        <select id="category" name="category" required>
+                            <option value="ЖКХ">ЖКХ</option>
+                            <option value="Благоустройство">Благоустройство</option>
+                            <option value="Дороги">Дороги</option>
+                            <option value="Мусор">Мусор</option>
+                            <option value="Социальные вопросы">Социальные вопросы</option>
+                            <option value="Образование">Образование</option>
+                            <option value="Здравоохранение">Здравоохранение</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Описание ситуации:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="files">Дополнительные файлы:</label>
+                        <input type="file" id="files" name="files[]" multiple>
+                    </div>
+
+                    <button type="submit">Отправить претензию</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 [Павловский Посад]. </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
